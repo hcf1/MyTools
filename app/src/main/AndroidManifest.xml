@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.batterydetails">
+    package="com.myTools">
 
     <uses-permission
         android:name="android.permission.BATTERY_STATS"
@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
 
         <receiver
-            android:name=".AutoStartReceiver"
+            android:name="com.myTools.broadcastReceiver.AutoStartReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -25,15 +25,14 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name=".MainActivity">
+        <activity android:name="com.myTools.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MusicService"></service>
+        <service android:name="com.myTools.services.MusicService"></service>
     </application>
 
 </manifest>
