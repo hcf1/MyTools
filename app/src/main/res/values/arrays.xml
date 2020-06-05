@@ -3,5 +3,6 @@
     <string-array name="menu">
         <item>查看电池</item>
         <item>播放音乐</item>
+        <item>多线程下载</item>
     </string-array>
 </resources>

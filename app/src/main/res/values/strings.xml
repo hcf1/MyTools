@@ -1,6 +1,34 @@
 <resources>
-    <string name="app_name">BatteryDetails</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">myTools</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">要下载资源的URL</string>
+    <string name="save_file">请输入保存的文件名(文件默认保存至/storage/emulated/0/Android/data/MyTools/files/download)</string>
+<!--    1.Android Q文件存储机制修改成了沙盒模式-->
+<!--    2.APP只能访问自己目录下的文件和公共媒体文件-->
+<!--    3.对于AndroidQ以下，还是使用老的文件存储方式-->
+<!--    Android Q仍然使用READ_EXTERNAL_STORAGE和WRITE_EXTERNAL_STORAGE作为存储相关运行时权限，-->
+<!--    但现在即使获取了这些权限，访问外部存储也受到了限制，只能访问自身目录下的文件和公共内体文件。-->
+<!--    外部存储结构划分-->
+<!--    1.公有目录：Download、Pictures 、DCIM、Movies、Music、Ringtones等-->
+<!--    地址：/storage/emulated/0/Downloads(Pictures)等-->
+<!--    公有目录下的文件不会跟随APP卸载而删除。-->
+<!--    2.APP私有目录-->
+<!--    地址：/storage/emulated/0/Android/data/包名/files-->
+<!--    私有目录存放app的私有文件，会随着App的卸载而删除-->
+    <string name="save_path">a.jpg</string>
+    <!--	cdata是xml语法，里面表示纯文本内容，不需要转义-->
+<!--    在XML中，需要转义的字符有：
+    　　(1)&　　　&amp;
+    　　(2)<　　　&lt;
+    　　(3)>　　　&gt;
+    　　(4)＂　　　&quot;
+    　　(5)＇　　　&apos;-->
+    <!--    android9开始不支持http-->
+<!--    <string name="down_url"><![CDATA[https://hcfi.ren/%E6%8E%8C%E4%B8%8A%E7%8E%A9%E8%BD%AC%E6%A0%A1%E5%9B%AD/images/%E7%A4%BE%E5%9B%A2/u1082.png]]></string>-->
+<!--    <string name="down_url"><![CDATA[https://180.76.142.171:8888/download?filename=%2Fwww%2Fwwwroot%2Fhcfi.ren%2Fxn__vqq932o8dc_xyz.tar.gz]]></string>-->
+    <string name="down_url"><![CDATA[https://dl2.xmind.cn/XMind-2020-for-Windows-64bit-10.1.3-202005082128.exe]]></string>
+    <string name="down">下载</string>
+    <string name="pause">暂停</string>
+    <string name="goOn">继续</string>
+    <string name="cancel">清除</string>
 </resources>

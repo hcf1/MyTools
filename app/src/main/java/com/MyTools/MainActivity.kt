@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.myTools.fragments.BatteryFragment
 import com.myTools.fragments.MainFragment
+import com.myTools.fragments.MultiThreadDownLoadFragment
 import com.myTools.fragments.MusicFragment
 
 
@@ -74,6 +75,8 @@ class MainActivity : FragmentActivity(),
             BatteryFragment()
         val mFragment =
             MusicFragment()
+        val dFragment =
+            MultiThreadDownLoadFragment()
         Log.i("aaa","点击了mainFragment")
         when (id) {
             0 -> {
@@ -93,6 +96,15 @@ class MainActivity : FragmentActivity(),
                 var transaction = supportFragmentManager.beginTransaction().apply {
                     supportFragmentManager.popBackStack()
                     replace(R.id.book_detail_container, mFragment)
+//                    add(R.id.book_detail_container, mFragment)
+                    addToBackStack(null)
+                }
+                transaction.commit()
+            }
+            2 -> {
+                var transaction = supportFragmentManager.beginTransaction().apply {
+                    supportFragmentManager.popBackStack()
+                    replace(R.id.book_detail_container, dFragment)
 //                    add(R.id.book_detail_container, mFragment)
                     addToBackStack(null)
                 }
