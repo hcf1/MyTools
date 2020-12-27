@@ -13,8 +13,11 @@ class BreakPointFileManager(
     var downUtil: DownUtil,
     var targetFile: String,
     var threadNum: Int,
-    var threads: Array<DownUtil.DownThread?>
+    var threads: Array<DownUtil.DownThread?>,
+    var lastModified:Long = 0,
+    var oldContentLength:Long=0
 ) {
+
     fun saveProgress(context: FragmentActivity?) {
         var preferences = context?.getSharedPreferences("downProgress", Context.MODE_PRIVATE)
         var editor = preferences?.edit()

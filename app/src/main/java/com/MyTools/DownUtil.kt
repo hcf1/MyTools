@@ -59,11 +59,15 @@ open class DownUtil( // 定义下载资源的路径
      * 开始下载：1.获取服务端文件大小。2.创建并给每个线程分配任务，启动所有线程
      * */
     fun download() {
+        val conn = httpURLConnection()
         //创建断点下载工具类对象
         breakPointDownUtil = BreakPointFileManager(context, this, targetFile, threadNum, threads)
-        val conn = httpURLConnection()
         // 得到文件大小
         fileSize = conn.contentLength.toLong()
+        // 获取服务器文件上次修改的时间戳
+        breakPointDownUtil!!.lastModified=conn.lastModified
+        // 初次获取服务器文件的大小
+        breakPointDownUtil!!.oldContentLength= conn.contentLength.toLong()
         conn.disconnect()
         //给每个线程设置下载的大小及下载的起始位置并启动线程
         breakPointDownUtil!!.setThreadDownloadContent(fileSize)
