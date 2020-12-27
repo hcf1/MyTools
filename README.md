@@ -16,7 +16,7 @@
 
 ### 2.3多线程下载模块
 
-![多线程下载](G:%5CAndroid%5CBatteryDetails%5C%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD.gif)
+![多线程下载](https://github.com/hcf1/MyTools/blob/master/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD.gif)
 
 全局信号：
 
